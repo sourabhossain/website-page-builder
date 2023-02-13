@@ -1,0 +1,136 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.color-picker {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    position: relative;
+
+    input[type="color"] {
+        visibility: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    label {
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        background: #000000;
+        border-radius: 3px;
+    }
+
+    input[type="text"] {
+        width: 60px;
+        margin-left: 5px;
+        border: none;
+        outline: none;
+    }
+}
+
+.unit-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+
+    label {
+        color: #020B53;
+        font-size: 12px;
+        border-left: 1px solid rgba(121, 127, 167, 0.3);
+        padding: 8px 5px;
+    }
+    
+    input {
+        width: 50px;
+        padding: 8px;
+        border: none;
+        outline: none;
+    }
+}
+
+.drop-element-wrapper {
+    position: relative;
+
+    .title {
+        font-size: 12px;
+        line-height: 22px;
+        background-color: #3E64DE;
+        color: #ffffff;
+        position: absolute;
+        left: -2px;
+        top: -22px;
+        padding: 0px 10px;
+        border-radius: 2px 2px 0px 0px;
+        display: none;
+    }
+
+    .delete {
+        font-size: 12px;
+        line-height: 22px;
+        background-color: #3E64DE;
+        color: #ffffff;
+        position: absolute;
+        height: 24px;
+        right: -2px;
+        top: -24px;
+        padding: 0px 4px;
+        cursor: pointer;
+        border-radius: 2px 2px 0px 0px;
+        display: none;
+    }
+
+    &.active {
+        border: 2px solid #3E64DE;
+
+        .title, .delete {
+            display: block;
+        }
+    }
+}
